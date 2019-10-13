@@ -1,0 +1,35 @@
+{
+  "name": "graphql-gateway-example",
+  "version": "1.0.0",
+  "description": "Example GraphQL gateway which calls multiple HTTP endpoints ",
+  "main": "./src/gateway.js",
+  "scripts": {
+    "start-gateway": "nodemon src/gateway.js",
+    "start-service-author": "nodemon ./resources/authorServer.js",
+    "start-service-book": "nodemon ./resources/bookServer.js",
+    "start-service-review": "nodemon ./resources/reviewServer.js",
+    "start-services": "concurrently \"npm:start-service-*\"",
+    "start": "concurrently \"npm:start-services\" \"npm:start-gateway\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skabbi/GraphQL-Gateway-Example.git"
+  },
+  "keywords": [
+    "graphql",
+    "gateway"
+  ],
+  "author": "Skabbi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skabbi/GraphQL-Gateway-Example/issues"
+  },
+  "homepage": "https://github.com/skabbi/GraphQL-Gateway-Example#readme",
+  "dependencies": {
+    "apollo-server": "^2.9.6",
+    "concurrently": "^5.0.0",
+    "express": "^4.17.1",
+    "fetch": "^1.1.0",
+    "nodemon": "^1.19.3"
+  }
+}
