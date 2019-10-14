@@ -12,7 +12,7 @@ Then in your browser:
 &nbsp;&nbsp;&nbsp;&nbsp; the URL "http://localhost:3002/" will run the Book HTTP server.  
 &nbsp;&nbsp;&nbsp;&nbsp; the URL "http://localhost:3003/" will run the Review HTTP server.
 
-The gateway allows you to get information about authors, books and in a single query.
+The gateway allows you to get information about authors, books and reviews in a single query.
 
 **Example gateway request:**
 ```
